@@ -50,6 +50,7 @@ html, body {
     align-items: center;
 }
 
+/* --- Each div with the message class contains the texts of each view (see HTML) --- */
 .message{
     margin: 5.5% 0 -5.5% 0;
     font-size: 4.75vh;
@@ -78,17 +79,17 @@ span {
     position: relative;
     top: -0.5em;
 }
-#conditions {
+#conditions { /* this is for the caption texts */
     margin-top: 1%;
     text-align: left;
     font-size: 3.2vw;
 }
 
-/*--------- MESSAGE 1 ---------*/
+/*--------- MESSAGE 0 (view1) ---------*/
 #prets {
     transform: translate(0, calc(var(--logo1-width) * 0.5));
 }
-/*--------- MESSAGE 2 ---------*/
+/*--------- MESSAGE 1 (view2) ---------*/
 #apartirde {
     margin-top: 3%;
     font-size: 0.9em; 
@@ -97,7 +98,7 @@ span {
     margin: 0;
     font-size: 2.7em;
 }
-/*--------- MESSAGE 3 ---------*/
+/*--------- MESSAGE 2 (view3) ---------*/
 #uneoptique {
     font-size: 2.02em;
 }
@@ -107,7 +108,7 @@ span {
 #plusune {
     font-size: 1.47em;
 }
-/*--------- MESSAGE 4 ---------*/
+/*--------- MESSAGE 3 (view4) ---------*/
 #adresse {
     margin-top: 5vh;
     font-size: 0.8em;
@@ -131,7 +132,7 @@ span {
     transform: translate(calc((100% - 100vw) * -0.5), 0);
 }
 
-/* MAPS */
+/*--------- MAPS ---------*/
 #maps {
     min-width: 100%;
     height: calc(var(--video-height) + 1%);
