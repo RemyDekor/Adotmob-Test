@@ -1,0 +1,164 @@
+html, body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url("../assets/HelveticaNeueLTStdCn.woff") format("woff");
+}
+
+#ad-wrapper {
+    --krys-blue: #4facdb;
+    --logo1-width: calc((28vw + 14vh) * 0.5);
+    --video-height: 42%;
+    box-sizing: border-box;
+
+    font-family: "HelveticaNeue", sans-serif;
+    color: #fff;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--krys-blue);
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*--------- logo 1rst position ---------*/
+#logo { 
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    width: var(--logo1-width);
+    min-width: 78px;
+    transform: translate(-50%, -50%);
+}
+
+#texts-wrapper {
+    width: 90%;
+    height: calc(100% - var(--video-height));;
+    padding: 5%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message{
+    margin: 5.5% 0 -5.5% 0;
+    font-size: 4.75vh;
+    letter-spacing: 0.06em;
+    height: 100%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+span {
+    display: block;
+}
+.message > div {
+    margin: 0 0 3% 0;
+}
+.message > div > div {
+    margin: 0;
+    line-height: 0.97em;
+}
+.asterisque {
+    display: inline;
+    font-size: 0.6em;
+    position: relative;
+    top: -0.5em;
+}
+#conditions {
+    margin-top: 1%;
+    text-align: left;
+    font-size: 3.2vw;
+}
+
+/*--------- MESSAGE 1 ---------*/
+#prets {
+    transform: translate(0, calc(var(--logo1-width) * 0.5));
+}
+/*--------- MESSAGE 2 ---------*/
+#apartirde {
+    margin-top: 3%;
+    font-size: 0.9em; 
+}
+#price {
+    margin: 0;
+    font-size: 2.7em;
+}
+/*--------- MESSAGE 3 ---------*/
+#uneoptique {
+    font-size: 2.02em;
+}
+#antilumiere {
+    font-size: 0.92em;
+}
+#plusune {
+    font-size: 1.47em;
+}
+/*--------- MESSAGE 4 ---------*/
+#adresse {
+    margin-top: 5vh;
+    font-size: 0.8em;
+    letter-spacing: normal;
+}
+#merendre {
+    margin-top: calc((2vw + 2vh) * 0.5);
+    font-size: 0.6em;
+    border: #fff 1px solid;
+    padding: 3vw;
+    cursor: pointer;
+}
+
+/*--------- VIDEO ---------*/
+#video-container {
+    height: var(--video-height);
+}
+#video-boucle {
+    height: 100%;
+    min-width: 100%;
+    transform: translate(calc((100% - 100vw) * -0.5), 0);
+}
+
+/* MAPS */
+#maps {
+    min-width: 100%;
+    height: calc(var(--video-height) + 1%);
+    position: absolute;
+    bottom: 0;
+    transform: translate(0, 100%);
+}
+#maps.covervideo {
+    transition: 0.8s ease-in-out;
+    transform: translate(0,0);
+}
+
+/*--------- CLASSES FOR ANIMATIONS ---------*/
+.translated-out {
+    transform: translate(calc(50vw + 50%), 0);
+    transition: ease-out;
+}
+.faded-out {
+    opacity: 0;
+}
+/*--------- logo 2nd position ---------*/
+#logo.in-corner {
+    transition: ease-out;
+    position: absolute;
+    top: 8vw;
+    left: 8vw;
+    width: calc((16.5vw + 8.5vh) * 0.5);
+    min-width: 47px;
+    transform: translate(0, 0);
+}
